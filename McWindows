@@ -1,3 +1,5 @@
+#Instructions - Paste the following into IE: http://boxstarter.org/package/nr/url?https://pastebin.com/raw/RuCCF0G7
+
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions
 Enable-RemoteDesktop
 Set-StartScreenOptions -EnableBootToDesktop
