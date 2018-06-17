@@ -3,11 +3,35 @@
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions
 Enable-RemoteDesktop
 Set-StartScreenOptions -EnableBootToDesktop
- 
+
+# Install Core
 cinst chocolatey -y
 cinst chocolateygui -y
+
+#Internet
 cinst googlechrome -y
+cinst qbittorrent -y
+
+#Development
 cinst visualstudiocode -y
+#cinst virtualbox -y
+
+#Multimedia
+cinst vlc -y
+#cinst darktable -y
+cinst gimp -y
+cinst inkscape -y
+#cinst blender -y
+#cinst audacity -y
+#cinst lmms -y
+#cinst obs -y
+#cinst sketchup -y
+
+#Tools
+cinst sharex -y
+cinst etcher -y
+cinst rufus -y
+cinst speedcrunch -y
 
  
 Install-WindowsUpdate -AcceptEula
