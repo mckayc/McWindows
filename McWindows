@@ -1,0 +1,23 @@
+Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions
+Enable-RemoteDesktop
+Set-StartScreenOptions -EnableBootToDesktop
+ 
+cinst chocolatey -y
+cinst chocolateygui -y
+cinst googlechrome -y
+#cinst tightvnc -y  
+cinst skype -y  
+cinst sublimetext3 -y
+cinst atom -y
+cinst visualstudiocode -y
+cinst python2 -y
+cinst python3 -y
+cinst javaruntime -y
+cinst jdk9 -y
+cinst git -y
+cinst scala.install -y
+cinst eclipse -y
+cinst intellijidea-community -y
+cinst visualstudio2017community -y
+ 
+Install-WindowsUpdate -AcceptEula
