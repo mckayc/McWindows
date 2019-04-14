@@ -16,18 +16,19 @@ cinst qbittorrent -y
 
 #Development
 cinst visualstudiocode -y
-#cinst virtualbox -y
+cinst virtualbox -y
 
 #Multimedia
 cinst vlc -y
-#cinst darktable -y
+cinst darktable -y
 cinst gimp -y
 cinst inkscape -y
-#cinst blender -y
-#cinst audacity -y
-#cinst lmms -y
-#cinst obs -y
+cinst blender -y
+cinst audacity -y
+cinst lmms -y
+cinst obs -y
 #cinst sketchup -y
+cinst sketchup kdenlive -y
 
 #Tools
 cinst sharex -y
