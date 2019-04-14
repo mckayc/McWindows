@@ -27,14 +27,20 @@ cinst blender -y
 cinst audacity -y
 cinst lmms -y
 cinst obs -y
-#cinst sketchup -y
-cinst sketchup kdenlive -y
+cinst kdenlive -y
 
 #Tools
 cinst sharex -y
 cinst etcher -y
 cinst rufus -y
 cinst speedcrunch -y
+
+#3D Printing
+cinst cura -y
+cinst freecad -y
+
+#Gaming
+cinst steam -y
 
  
 Install-WindowsUpdate -AcceptEula
