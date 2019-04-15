@@ -36,6 +36,7 @@ cinst rufus -y
 cinst speedcrunch -y
 cinst 7zip -y
 cinst qdir -y
+cinst virtuawin -y
 
 #3D Printing
 cinst cura -y
