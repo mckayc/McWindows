@@ -45,6 +45,6 @@ cinst freecad -y
 cinst steam -y
 
 #System
-cinst skyfonts -y
+
  
 Install-WindowsUpdate -AcceptEula
