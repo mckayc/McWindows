@@ -29,6 +29,7 @@ cinst vlc -y
 cinst obs-studio -y
 #cinst kdenlive -y
 cinst plexmediaserver -y
+cinst sonarr -y
 
 #Tools
 #cinst sharex -y
