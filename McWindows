@@ -18,20 +18,27 @@ cinst openvpn -y
 #Development
 cinst virtualbox -y
 cinst vscode -y
+cinst notepadplusplus -y
 
-#Multimedia
+#Multimedia - Audio
 cinst vlc -y
-cinst darktable -y
-cinst gimp -y
-cinst inkscape -y
-cinst blender -y
 cinst audacity -y
 cinst lmms -y
+
+#Multimedia - Video
 cinst obs-studio -y
 cinst kdenlive -y
 cinst plexmediaserver -y
 cinst sonarr -y
 cinst kodi -y
+
+#Multimedia - Photo
+cinst darktable -y
+
+#Multimedia - Graphics
+cinst gimp -y
+cinst inkscape -y
+cinst blender -y
 
 #Tools
 cinst sharex -y
@@ -45,12 +52,13 @@ cinst crystaldiskmark -y
 cinst as-ssd -y
 
 #3D Printing
-#cinst cura -y
-#cinst freecad -y
+cinst cura -y
+cinst freecad -y
 
 #Gaming
 cinst steam -y
 
 #System
  
+# Windows Updates
 Install-WindowsUpdate -AcceptEula
