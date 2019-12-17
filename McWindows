@@ -13,45 +13,43 @@ cinst chocolateygui -y
 #Internet
 cinst googlechrome -y
 cinst qbittorrent -y
+cinst openvpn -y
 
 #Development
-#cinst visualstudiocode -y
-#cinst virtualbox -y
+cinst virtualbox -y
+cinst vscode -y
 
 #Multimedia
 cinst vlc -y
-#cinst darktable -y
-#cinst gimp -y
-#cinst inkscape -y
-#cinst blender -y
-#cinst audacity -y
-#cinst lmms -y
+cinst darktable -y
+cinst gimp -y
+cinst inkscape -y
+cinst blender -y
+cinst audacity -y
+cinst lmms -y
 cinst obs-studio -y
-#cinst kdenlive -y
+cinst kdenlive -y
 cinst plexmediaserver -y
 cinst sonarr -y
 cinst kodi -y
 
 #Tools
-#cinst sharex -y
+cinst sharex -y
 cinst etcher -y
 cinst rufus -y
-#cinst speedcrunch -y
-#cinst 7zip -y
-#cinst qdir -y
-#cinst autohotkey -y
+cinst speedcrunch -y
+cinst 7zip -y
+cinst qdir -y
+cinst autohotkey -y
+cinst crystaldiskmark -y
 
 #3D Printing
 #cinst cura -y
 #cinst freecad -y
 
 #Gaming
-#cinst steam -y
+cinst steam -y
 
 #System
-
-#Development
-#cinst vscode -y
-
  
 Install-WindowsUpdate -AcceptEula
