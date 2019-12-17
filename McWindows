@@ -19,6 +19,7 @@ cinst openvpn -y
 cinst virtualbox -y
 cinst vscode -y
 cinst notepadplusplus -y
+cinst git -y
 
 #Multimedia - Audio
 cinst vlc -y
@@ -28,9 +29,9 @@ cinst lmms -y
 #Multimedia - Video
 cinst obs-studio -y
 cinst kdenlive -y
-cinst plexmediaserver -y
-cinst sonarr -y
-cinst kodi -y
+#cinst plexmediaserver -y
+#cinst sonarr -y
+#cinst kodi -y
 
 #Multimedia - Photo
 cinst darktable -y
