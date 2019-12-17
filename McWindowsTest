@@ -4,8 +4,8 @@
 # git stuff
 
 # Create folder
-mkdir %USERPROFILE%/git
-cd %USERPROFILE%/git
+mkdir ~\Documents\Git
+cd ~\Documents\Git
 
 # Checkout the McKayC Repository
 git clone https://github.com/mckayc/McWindows
