@@ -1,4 +1,7 @@
 #Instructions - Paste the following into IE: 
 #http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/mckayc/McWindows/master/McWindowsTest
 
-mkdir C:\Testttttt
+# git stuff
+
+# Checkout the McKayC Repository
+git clone https://github.com/mckayc/McWindows
