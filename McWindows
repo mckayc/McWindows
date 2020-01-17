@@ -51,6 +51,7 @@ cinst qdir -y
 cinst autohotkey -y
 cinst crystaldiskmark -y
 cinst as-ssd -y
+cinst windirstat -y
 
 #3D Printing
 cinst cura -y
