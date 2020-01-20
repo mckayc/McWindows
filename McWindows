@@ -40,6 +40,7 @@ cinst darktable -y
 cinst gimp -y
 cinst inkscape -y
 cinst blender -y
+cinst skyfonts -y
 
 #Tools
 cinst sharex -y
