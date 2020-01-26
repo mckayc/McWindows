@@ -29,6 +29,8 @@ cinst lmms -y
 #Multimedia - Video
 cinst obs-studio -y
 cinst kdenlive -y
+cinst file-converter -y
+cinst handbrake -y
 #cinst plexmediaserver -y
 #cinst sonarr -y
 #cinst kodi -y
