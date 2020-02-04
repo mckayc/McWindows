@@ -13,49 +13,48 @@ cinst chocolateygui -y
 #Internet
 cinst googlechrome -y
 cinst qbittorrent -y
-#cinst openvpn -y
+cinst openvpn -y
 
 #Development
-#cinst virtualbox -y
-#cinst vscode -y
+cinst virtualbox -y
+cinst vscode -y
 #cinst notepadplusplus -y
-#cinst git -y
+cinst git -y
 
 #Multimedia - Audio
-#cinst vlc -y
-#cinst audacity -y
-#cinst lmms -y
+cinst vlc -y
+cinst audacity -y
+cinst lmms -y
 
 #Multimedia - Video
-#cinst obs-studio -y
+cinst obs-studio -y
 #cinst kdenlive -y
-#cinst file-converter -y
+cinst file-converter -y
 #cinst handbrake -y
 #cinst plexmediaserver -y
 #cinst sonarr -y
 #cinst kodi -y
 
 #Multimedia - Photo
-#cinst darktable -y
+cinst darktable -y
 
 #Multimedia - Graphics
-#cinst gimp -y
-#cinst inkscape -y
-#cinst blender -y
+cinst gimp -y
+cinst inkscape -y
+cinst blender -y
 #cinst skyfonts -y
-#cinst carnac -y
+cinst carnac -y
 
 #Tools
-#cinst sharex -y
-#cinst etcher -y
-#cinst rufus -y
-#cinst speedcrunch -y
-#cinst 7zip -y
-#cinst qdir -y
-#cinst autohotkey -y
-#cinst crystaldiskmark -y
-#cinst as-ssd -y
-#cinst windirstat -y
+cinst sharex -y
+cinst etcher -y
+cinst rufus -y
+cinst speedcrunch -y
+cinst 7zip -y
+cinst qdir -y
+cinst autohotkey -y
+cinst as-ssd -y
+cinst windirstat -y
 
 #3D Printing
 #cinst cura -y
@@ -67,9 +66,9 @@ cinst qbittorrent -y
 #System
 
 #Downloading
-cinst sonarr -y
-cinst jackett -y
-cinst radarr -y
+#cinst sonarr -y
+#cinst jackett -y
+#cinst radarr -y
  
 # Windows Updates
 Install-WindowsUpdate -AcceptEula
@@ -77,12 +76,12 @@ Install-WindowsUpdate -AcceptEula
 # git stuff
 
 # Create folder
-#mkdir ~\Documents\Git
-#cd ~\Documents\Git
+mkdir ~\Documents\Git
+cd ~\Documents\Git
 
 # Checkout the McKayC Repository
-#git clone https://github.com/mckayc/McWindows
+git clone https://github.com/mckayc/McWindows
 
 # Create Links for Scripts to start on startup
-#New-Item -ItemType SymbolicLink -Path "~\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" -Name "volume.lnk" -Value "~\Documents\Git\McWindows\AutoHotKeys\volume.ahk"
+New-Item -ItemType SymbolicLink -Path "~\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" -Name "volume.lnk" -Value "~\Documents\Git\McWindows\AutoHotKeys\volume.ahk"
 
