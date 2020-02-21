@@ -31,7 +31,8 @@ cinst obs-studio -y
 #cinst kdenlive -y
 cinst file-converter -y
 cinst winff -y
-cinst choco install youtube-dl-gui -y
+cinst youtube-dl -y
+cinst youtube-dl-gui -y
 #cinst handbrake -y
 #cinst plexmediaserver -y
 #cinst sonarr -y
