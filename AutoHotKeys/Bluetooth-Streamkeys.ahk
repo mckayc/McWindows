@@ -13,3 +13,12 @@ Media_Prev::
 !,
 return
 
+;Volume Up
+Volume_Up::
+!=
+return
+
+;Volume Down
+Volume_Down::
+!-
+return
