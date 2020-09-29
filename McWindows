@@ -16,7 +16,7 @@ cinst qbittorrent -y
 cinst openvpn -y
 
 #Development
-cinst virtualbox -y
+#cinst virtualbox -y
 cinst vscode -y
 #cinst notepadplusplus -y
 cinst git -y
@@ -30,7 +30,7 @@ cinst lmms -y
 cinst obs-studio -y
 #cinst kdenlive -y
 cinst file-converter -y
-cinst winff -y
+#cinst winff -y
 cinst youtube-dl -y
 cinst youtube-dl-gui -y
 #cinst handbrake -y
@@ -46,7 +46,7 @@ cinst gimp -y
 cinst inkscape -y
 cinst blender -y
 #cinst skyfonts -y
-cinst carnac -y
+#cinst carnac -y
 
 #Tools
 cinst sharex -y
@@ -60,11 +60,11 @@ cinst as-ssd -y
 cinst windirstat -y
 
 #3D Printing
-#cinst cura -y
+cinst cura -y
 #cinst freecad -y
 
 #Gaming
-#cinst steam -y
+cinst steam -y
 
 #System
 
