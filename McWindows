@@ -72,6 +72,9 @@ cinst steam -y
 #cinst sonarr -y
 #cinst jackett -y
 #cinst radarr -y
+
+# Set Chocolatey to auto-update every day
+choco install choco-upgrade-all-at --params "'/DAILY:yes /TIME:05:00 /ABORTTIME:06:00'" -y
  
 # Windows Updates
 Install-WindowsUpdate -AcceptEula
