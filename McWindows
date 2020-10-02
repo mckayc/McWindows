@@ -45,6 +45,7 @@ cinst darktable -y
 cinst gimp -y
 cinst inkscape -y
 cinst blender -y
+cinst xnview -y
 #cinst skyfonts -y
 #cinst carnac -y
 
