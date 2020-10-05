@@ -59,6 +59,7 @@ cinst qdir -y
 cinst autohotkey -y
 cinst as-ssd -y
 cinst windirstat -y
+cinst ant-renamer -y
 
 #3D Printing
 cinst cura -y
