@@ -20,6 +20,7 @@ cinst openvpn -y
 cinst vscode -y
 #cinst notepadplusplus -y
 cinst git -y
+cinst winscp -y
 
 #Multimedia - Audio
 cinst vlc -y
