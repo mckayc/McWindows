@@ -20,6 +20,7 @@ cinst openvpn -y
 cinst vscode -y
 #cinst notepadplusplus -y
 cinst git -y
+cinst winscp -y
 
 #Multimedia - Audio
 cinst vlc -y
@@ -45,6 +46,7 @@ cinst darktable -y
 cinst gimp -y
 cinst inkscape -y
 cinst blender -y
+cinst xnviewmp -y
 #cinst skyfonts -y
 #cinst carnac -y
 
@@ -58,6 +60,7 @@ cinst qdir -y
 cinst autohotkey -y
 cinst as-ssd -y
 cinst windirstat -y
+cinst bulkrenameutility -y
 
 #3D Printing
 cinst cura -y
@@ -72,6 +75,9 @@ cinst steam -y
 #cinst sonarr -y
 #cinst jackett -y
 #cinst radarr -y
+
+# Set Chocolatey to auto-update every day
+choco install choco-upgrade-all-at --params "'/DAILY:yes /TIME:05:00 /ABORTTIME:06:00'" -y
  
 # Windows Updates
 Install-WindowsUpdate -AcceptEula
