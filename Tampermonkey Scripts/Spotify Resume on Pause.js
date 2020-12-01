@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Spotify-uBlock-Origin-Ad_Pause-Fix
+// @name         Spotify-Pause-Fix
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Fixes spotify getting stuck on "Advertisement" when ublock origin is in use
+// @description  Fixes spotify getting stuck after playing a few songs
 // @author       anonymous
 // @match        https://*.spotify.com/*
 // @grant        none
