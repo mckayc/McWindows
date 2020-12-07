@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Spotify-uBlock-Origin-Ad_Pause-Fix
+// @name         Spotify-Fix_Ad-Pause
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Fixes spotify getting stuck on "Advertisement" when ublock origin is in use
-// @author       anonymous
+// @description  Unpauses Spotify web when it gets stuck after an ad plays
+// @author       various
 // @match        https://*.spotify.com/*
 // @grant        none
 // ==/UserScript==
@@ -12,16 +12,15 @@
     'use strict';
     setInterval(function () {
 
-        var is_stuck = document.title.startsWith("Advertisement") || document.title == null;
-        console.log(`'Is Stuck' state = ${is_stuck}`);
+        var nowplaying = document.getElementsByClassName("now-playing")[0].getAttribute("aria-label"); // Find out the currently playing song or ad in the "now playing" section of Spotify
+        console.log(`Now Playing = ${nowplaying}`);
+        var playing_ad = document.title.startsWith("Advertisement") || nowplaying.startsWith("Advertisement"); // Find out the current state of Spotify; what is listed in the document/tab
         console.log(`Document Title = ${document.title}`);
-        console.log("Now Playing =");
-        var result = document.getElementsByClassName("_3773b711ac57b50550c9f80366888eab-scss ellipsis-one-line")[0].innerHTML;
-        console.log(result);
 
+        console.log(`'Playing_Ad' state = ${playing_ad}`); // states true/false for if the state is "Playing_Ad"
 
-        if (is_stuck) {
-console.log("AD Detected. Attempting to press the Pause button to bypass the add and resume playing.");
+        if (playing_ad) {
+            console.log("State detected as being paused after ad. Attempting to press the Pause button to resume playing media.");
 
             var buttons = document.getElementsByClassName("player-controls__buttons")[0];
             var b = buttons.childNodes[2].childNodes[0];
@@ -29,11 +28,9 @@ console.log("AD Detected. Attempting to press the Pause button to bypass the add
 
             if (b != null) {
                 playPauseButton.click();
-console.log("Play/Pause Button Clicked.");
-
+                console.log("Play/Pause Button Clicked.");
             }
-
         }
-    }, 5000);
+    }, 5000); // Set time for how often you want to check the state of a paused ad
 
 })();
