@@ -14,7 +14,7 @@
 
         var nowplaying = document.getElementsByClassName("now-playing")[0].getAttribute("aria-label"); // Find out the currently playing song or ad in the "now playing" section of Spotify
         console.log(`Now Playing = ${nowplaying}`);
-        var playing_ad = document.title.startsWith("Advertisement") || nowplaying.startsWith("Advertisement"); // Find out the current state of Spotify; what is listed in the document/tab
+        var playing_ad = document.title.startsWith("Advertisement") || nowplaying.includes("Advertisement") || nowplaying === ""; // Find out the current state of Spotify; what is listed in the document/tab
         console.log(`Document Title = ${document.title}`);
 
         console.log(`'Playing_Ad' state = ${playing_ad}`); // states true/false for if the state is "Playing_Ad"
