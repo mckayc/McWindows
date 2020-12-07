@@ -19,6 +19,11 @@
 
         console.log(`'Playing_Ad' state = ${playing_ad}`); // states true/false for if the state is "Playing_Ad"
 
+        var date, formattedTime;
+         date = new Date();
+         formattedTime = date.toISOString();
+        console.log(formattedTime);
+
         if (playing_ad) {
             console.log("State detected as being paused after ad. Attempting to press the Pause button to resume playing media.");
 
