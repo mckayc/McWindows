@@ -21,7 +21,7 @@
         console.log(`Now Playing = ${nowplaying}`);
 
         // Find out the current state of Spotify; what is listed in the document/tab - Set to true if on Advertisement
-        var playing_ad = document.title.startsWith("Advertisement") || nowplaying.startsWith("Advertisement"); 
+        var playing_ad = document.title.startsWith("Advertisement") || nowplaying.includes("Advertisement");
         console.log(`Document Title = ${document.title}`);
         console.log(`'Playing_Ad' state = ${playing_ad}`); // states true/false for if the state is "Playing_Ad"
 
