@@ -7,7 +7,7 @@
 
 
 $trackList = Import-Csv -Path .\trackList.csv # Import Tracklist from csv
-$iterations = 20000 # Specify how many track plays you want to simulate
+$iterations = 50000 # Specify how many track plays you want to simulate
 $count = 0 # Variable to use in the while loop to generate new list
 $newList = @() # Initiate the array
 
@@ -16,9 +16,8 @@ while($count -lt $iterations) # Only do as many tracks as specified
     $randomPlay = $trackList | Get-Random -Count 1 # Pull single random track from playlist
     $newList += $randomPlay # Append track to new list
     $count++
+    $percentComplete = ($count / $iterations)*100
+    Write-Progress "Step 1 of 2): Generate list - $count of $iterations - Percent complete = $percentComplete%"
+    $randomPlay | export-csv –append –Path "simulatedTrackList.csv" -NoTypeInformation
 }
-
-$newList | Export-Csv -Path "simulatedTrackList.csv" -NoTypeInformation
-
-
 
