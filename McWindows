@@ -47,7 +47,7 @@ cinst gimp -y
 cinst inkscape -y
 cinst blender -y
 cinst xnviewmp -y
-#cinst skyfonts -y
+cinst fontbase -y
 #cinst carnac -y
 
 #Tools
@@ -66,8 +66,13 @@ cinst bulkrenameutility -y
 cinst cura -y
 #cinst freecad -y
 
-#Gaming
-cinst steam -y
+#Gaming/Games
+#cinst steam -y
+cinst supertuxkart -y
+choco install neverball -y
+choco install openrct2 -y
+choco install 0ad -y
+
 
 #System
 
