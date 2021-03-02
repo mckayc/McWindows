@@ -27,6 +27,9 @@ cinst vlc -y
 cinst audacity -y
 cinst lmms -y
 
+#Office
+choco install okular -y
+
 #Multimedia - Video
 cinst obs-studio -y
 #cinst kdenlive -y
