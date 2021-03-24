@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spotify-Fix_Ad-Pause
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Unpauses Spotify web when it gets stuck after an ad plays
 // @author       various
 // @match        https://*.spotify.com/*
@@ -12,12 +12,16 @@
     'use strict';
     setInterval(function () {
 
+        // Post a note to show in the console so show how often the script is checking.
+        console.log(`Checking Song / Ad Status`);
+
         // If you want Spotify to play continuously and never pause, set to "y", otherwise set to anything else
         // Note; this will force play; even if you manually pause it. Default set to "n"
         var continuousPlay = "n"
 
         // Find out the currently playing song or ad in the "now playing" section of Spotify
-        var nowplaying = document.getElementsByClassName("now-playing")[0].getAttribute("aria-label"); 
+        // - OLD CODE - var nowplaying = document.getElementsByClassName("now-playing")[0].getAttribute("aria-label");
+        var nowplaying = document.getElementsByClassName("_116b05d7721c9dfb84bb69e8f4fc5e01-scss")[0].getAttribute("aria-label");
         console.log(`Now Playing = ${nowplaying}`);
 
         // Find out the current state of Spotify; what is listed in the document/tab - Set to true if on Advertisement
