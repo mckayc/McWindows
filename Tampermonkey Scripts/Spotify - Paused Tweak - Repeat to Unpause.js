@@ -9,6 +9,7 @@
 // ==/UserScript==
 
 // 2021-08-28 - Note; This script disables ads in spotify and allows continuous play of music. This script works in conjuntion with an ad blocker such as uBlock Origin
+// Note 2; This script basically disables the ability for the user to select the repeat mode. It will basically be off. 
 
 (function() {
     'use strict';
