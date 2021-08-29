@@ -23,16 +23,20 @@
         // Find out the current state of Spotify; what is listed in the document/tab - Set to true if on Advertisement
         var playing_ad = document.title.startsWith("Advertisement") || nowplaying.includes("Advertisement");
         console.log(`Document Title = ${document.title}`);
-        console.log(`'Playing_Ad' state = ${playing_ad}`); // states true/false for if the state is "Playing_Ad"
+        console.log(`- Playing_Ad state = ${playing_ad}`); // states true/false for if the state is "Playing_Ad"
 
         // Find out the state of the repeat button
         var repeatButtonState = document.getElementsByClassName("__1BGhJvHnvqYTPyG074")[0].getAttribute("aria-label");
-        console.log(`Repeat Button State = ${repeatButtonState}`); // Results = "Enable repeat", "Enable repeat one", "Disable repeat" - Disable repeat is the state that only repeats one
+        console.log(`- Repeat Button State = ${repeatButtonState}`); // Results = "Enable repeat", "Enable repeat one", "Disable repeat" - Disable repeat is the state that only repeats one
 
-       // Change repeat button if set to repeat one
-        if (repeatButtonState === "Disable repeat") {
+        // Find out if Spotify is in a Pause or Play state to enable continuous play
+        var PlayPausedState = document.getElementsByClassName("gro_tSi7cwspepH0as03")[0].getAttribute("aria-label");
+        console.log(`- Play/Paused state = ${PlayPausedState}`) // Results = "Pause", and "Play" - "Play" means that is is currently paused
+      
+        // Change repeat button if set to repeat one OR if Spotify is in a paused state (note this is just a test to see if this will fix the issue of Spotify removing the currently playing song if it has been in a paused state for a long time)
+        if (repeatButtonState === "Disable repeat" || PlayPausedState === "Play") {
             document.getElementsByClassName('__1BGhJvHnvqYTPyG074')[0].click();
-            console.log("Repeat button pressed to disallow repeating of a single song.");
+            console.log("Repeat button pressed to disallow repeating of a single song or to prevent Spotify from removing the song if being paused too long.");
         }       
 
         // Find out if Spotify is in a Pause or Play state to enable continuous play
