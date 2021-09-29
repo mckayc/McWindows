@@ -17,7 +17,8 @@
 
         // Find out the currently playing song or ad in the "now playing" section of Spotify
         // - OLD CODE - var nowplaying = document.getElementsByClassName("now-playing")[0].getAttribute("aria-label");
-        var nowplaying = document.getElementsByClassName("EWsF13IcnfuEu2no9Pxe tjwF5PJ3oBgTZ38aoRuK")[0].getAttribute("aria-label");
+        // - Old, extra class name. Worked in Windows but not mac   -   var nowplaying = document.getElementsByClassName("EWsF13IcnfuEu2no9Pxe tjwF5PJ3oBgTZ38aoRuK")[0].getAttribute("aria-label");
+        var nowplaying = document.getElementsByClassName("EWsF13IcnfuEu2no9Pxe")[0].getAttribute("aria-label");
         console.log(`Now Playing = ${nowplaying}`);
 
         // Find out the current state of Spotify; what is listed in the document/tab - Set to true if on Advertisement
