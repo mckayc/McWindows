@@ -13,7 +13,7 @@ cinst chocolateygui -y
 #Internet
 cinst googlechrome -y
 cinst qbittorrent -y
-cinst openvpn -y
+#cinst openvpn -y
 
 #Development
 #cinst virtualbox -y
@@ -25,7 +25,7 @@ cinst winscp -y
 #Multimedia - Audio
 cinst vlc -y
 cinst audacity -y
-cinst lmms -y
+#cinst lmms -y
 
 #Office
 choco install okular -y
@@ -35,22 +35,22 @@ cinst obs-studio -y
 #cinst kdenlive -y
 cinst file-converter -y
 #cinst winff -y
-cinst youtube-dl -y
-cinst youtube-dl-gui -y
+#cinst youtube-dl -y
+#cinst youtube-dl-gui -y
 #cinst handbrake -y
 #cinst plexmediaserver -y
 #cinst sonarr -y
 #cinst kodi -y
 
 #Multimedia - Photo
-cinst darktable -y
+#cinst darktable -y
 
 #Multimedia - Graphics
 cinst gimp -y
 cinst inkscape -y
 cinst blender -y
 cinst xnviewmp -y
-cinst fontbase -y
+#cinst fontbase -y
 #cinst carnac -y
 
 #Tools
@@ -66,15 +66,15 @@ cinst windirstat -y
 cinst bulkrenameutility -y
 
 #3D Printing
-cinst cura -y
+#cinst cura -y
 #cinst freecad -y
 
 #Gaming/Games
 #cinst steam -y
-cinst supertuxkart -y
-choco install neverball -y
-choco install openrct2 -y
-choco install 0ad -y
+#cinst supertuxkart -y
+#choco install neverball -y
+#choco install openrct2 -y
+#choco install 0ad -y
 
 
 #System
