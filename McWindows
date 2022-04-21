@@ -64,6 +64,7 @@ cinst autohotkey -y
 cinst as-ssd -y
 cinst windirstat -y
 cinst bulkrenameutility -y
+cinst key-n-stroke -y
 
 #3D Printing
 #cinst cura -y
