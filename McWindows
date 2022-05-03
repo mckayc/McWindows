@@ -44,6 +44,7 @@ cinst file-converter -y
 
 #Multimedia - Photo
 #cinst darktable -y
+cinst amazon-photos -y
 
 #Multimedia - Graphics
 cinst gimp -y
