@@ -37,6 +37,7 @@ cinst file-converter -y
 #cinst winff -y
 #cinst youtube-dl -y
 #cinst youtube-dl-gui -y
+cinst yt-dlg.install -y
 #cinst handbrake -y
 #cinst plexmediaserver -y
 #cinst sonarr -y
