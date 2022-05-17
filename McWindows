@@ -43,6 +43,7 @@ cinst tartube -y
 #cinst plexmediaserver -y
 #cinst sonarr -y
 #cinst kodi -y
+cinst touchportal -y
 
 #Multimedia - Photo
 #cinst darktable -y
