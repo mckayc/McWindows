@@ -69,6 +69,7 @@ cinst as-ssd -y
 cinst windirstat -y
 cinst bulkrenameutility -y
 cinst key-n-stroke -y
+cinst powertoys -y
 
 #3D Printing
 #cinst cura -y
