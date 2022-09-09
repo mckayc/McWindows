@@ -21,7 +21,6 @@ $acceptedPackages = @()
 $packages =
 @(
     'googlechrome'
-    'googlechrome'
     'qbittorrent'
     'openvpn'
     'wireguard'
@@ -67,7 +66,6 @@ $packages =
     'neverball'
     'openrct2'
     '0ad'
-    'sonarr'
     'jackett'
     'radarr'
 )
@@ -86,7 +84,7 @@ foreach ($package in $packages) {
 
 foreach ($acceptedPackage in $acceptedPackages) {
     Write-Output "Installing the package $acceptedPackage"
-    #choco install $acceptedPackage -y
+    choco install $acceptedPackage -y
 }
 
 # Set Chocolatey to auto-update every day
