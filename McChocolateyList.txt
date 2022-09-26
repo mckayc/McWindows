@@ -1,0 +1,8 @@
+googlechrome = 'Internet'
+sharex  = 'Tools'
+neverball = 'Games'
+wireguard = 'Internet'
+supertuxkart = 'Games'
+qbittorrent = 'Internet'
+openvpn = 'Internet'
+freecad = 'Graphics'
