@@ -15,3 +15,4 @@ kodi = Multimedia
 plexamp = Multimedia
 darktable = Graphics
 gimp = Graphics
+banana = banana
