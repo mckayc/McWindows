@@ -1,13 +1,19 @@
-# Testing to see if I can comment out things
+# Add packages in the formate of (packageName) = (Category)
+# The package name is what actually allows you to install things. 
+# The Category simply sorts the packages by category to simplify things when approving software.
+# Feel free to comment out any packages you don't want to show up as an option to install
+
+
+# chocolateyPackageName = Category
 
 googlechrome = Internet
 sharex  = Tools
 neverball = Games
 wireguard = Internet
 supertuxkart = Games
-# qbittorrent = Internet
+qbittorrent = Internet
 openvpn = Internet
-freecad = Graphics
+freecad = 3D Printing
 handbrake = Tools
 plexmediaserver = Media Server
 sonarr = Media Server
@@ -15,4 +21,16 @@ kodi = Multimedia
 plexamp = Multimedia
 darktable = Graphics
 gimp = Graphics
-banana = banana
+# banana = banana
+speedcruch = Tools
+7zip = Tools
+qdir = Tools
+autohotkey = Tools
+as-ssd = Tools
+windirstat = Tools
+blukrenameutility = Tools
+cura = 3D Printing
+openrct2 = Games
+0ad = Games
+jackett = Media Server
+radarr = Media Server
