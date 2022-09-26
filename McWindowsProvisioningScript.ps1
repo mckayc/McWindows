@@ -12,19 +12,10 @@ Invoke-WebRequest -Uri $repository -OutFile $txtFile
 $imported = Get-Content -raw $txtFile | ConvertFrom-StringData
 $packageList = $imported
 
+
+# Messaging for basic instructions
 Write-Host "If you would like to install the listed package, please enter 'y'; otherwise leave blank."
 
-
-# $packageList = @{
-#     googlechrome = 'Internet'
-#     sharex  = 'Tools'
-#     neverball = 'Games'
-#     wireguard = 'Internet'
-#     supertuxkart = 'Games'
-#     qbittorrent = 'Internet'
-#     openvpn = 'Internet'
-#     freecad = 'Graphics'
-# }
 $packageList = $packageList.GetEnumerator() | sort -Property Value 
 
 foreach ($package in $packageList) {

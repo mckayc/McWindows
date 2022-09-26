@@ -1,4 +1,4 @@
-googlechrome = 'Internet'
+googlechrome = Internet
 sharex  = Tools
 neverball = Games
 wireguard = Internet
@@ -6,3 +6,10 @@ supertuxkart = Games
 qbittorrent = Internet
 openvpn = Internet
 freecad = Graphics
+handbrake = Tools
+plexmediaserver = Media Server
+sonarr = Media Server
+kodi = Multimedia
+plexamp = Multimedia
+darktable = Graphics
+gimp = Graphics
