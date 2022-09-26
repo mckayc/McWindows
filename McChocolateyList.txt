@@ -1,9 +1,11 @@
+# Testing to see if I can comment out things
+
 googlechrome = Internet
 sharex  = Tools
 neverball = Games
 wireguard = Internet
 supertuxkart = Games
-qbittorrent = Internet
+# qbittorrent = Internet
 openvpn = Internet
 freecad = Graphics
 handbrake = Tools
