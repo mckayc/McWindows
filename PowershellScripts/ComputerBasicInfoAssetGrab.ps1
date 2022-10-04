@@ -9,8 +9,6 @@ $serial = Get-WmiObject win32_bios | select Serialnumber
 $portInfo = Get-PnpDevice -PresentOnly | Where-Object { $_.InstanceId -match '^USB' }
 
 
-
-
 # Write to file
 Add-Content -Path $fileLocation/$fileName -Value "Computer Info `r"
 
@@ -51,3 +49,7 @@ Add-Content -Path $fileLocation/$fileName -Value "`r `r"
 Add-Content -Path $fileLocation/$fileName -Value "Port Info `r"
 
 Add-Content -Path $fileLocation/$fileName -Value $portInfo
+
+Remove-Item $fileLocation/ComputerBasicInfoAssetGrab.bat
+Remove-Item $fileLocation/ComputerBasicInfoAssetGrab.ps1
+
