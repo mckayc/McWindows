@@ -50,9 +50,6 @@ Add-Content -Path $fileLocation/$fileName -Value "Port Info `r"
 
 Add-Content -Path $fileLocation/$fileName -Value $portInfo
 
-# Expand partition to full capacity
-Resize-Partition -DriveLetter C -Size $(Get-PartitionSupportedSize -DriveLetter C).SizeMax
-
 Remove-Item $fileLocation/ComputerBasicInfoAssetGrab.bat
 Remove-Item $fileLocation/ComputerBasicInfoAssetGrab.ps1
 
