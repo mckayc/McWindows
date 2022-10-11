@@ -49,3 +49,6 @@ Add-Content -Path $fileLocation/$fileName -Value "`r `r"
 Add-Content -Path $fileLocation/$fileName -Value "Port Info `r"
 
 Add-Content -Path $fileLocation/$fileName -Value $portInfo
+
+Remove-Item $fileLocation/ComputerBasicInfoAssetGrab.bat
+Remove-Item $fileLocation/ComputerBasicInfoAssetGrab.ps1
