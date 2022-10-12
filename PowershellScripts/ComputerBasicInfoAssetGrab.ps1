@@ -13,11 +13,14 @@ $model = Get-CimInstance -ClassName Win32_ComputerSystem
 $processor = Get-WMIObject win32_Processor | select name
 $serial = Get-WmiObject win32_bios | select Serialnumber
 $portInfo = Get-PnpDevice -PresentOnly | Where-Object { $_.InstanceId -match '^USB' }
+$licenseType = (Get-CimInstance -ClassName Win32_OperatingSystem).Name.Split("|")[0]
+
 
 $computerSpecs = New-Object System.Collections.Specialized.OrderedDictionary
 
 $computerSpecs.Add($now, "")
 $computerSpecs.Add("Computer Info", "")
+$computerSpecs.Add("License Type: ", $licenseType)
 $computerSpecs.Add("Manufacturer: ", $model.Manufacturer)
 $computerSpecs.Add("Model: ", $model.Model)
 $computerSpecs.Add("Serial Number: ", $serial.Serialnumber)
@@ -63,7 +66,7 @@ $computerSpecs.Add("Port Info: ", $portInfo)
 # Add the Slack URI below for this to work
 foreach($key in $computerSpecs.keys)
 {
-    $uriSlack = "AddSlackWebhookURLHere"
+    $uriSlack = "https://hooks.slack.com/services/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"
     $body = ConvertTo-Json @{
         pretext = "Computer Ready for Surplus"
         text = "$($key) `n$($computerSpecs[$key])`n"
