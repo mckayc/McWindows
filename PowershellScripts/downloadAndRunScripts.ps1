@@ -11,7 +11,7 @@ $zipName = "scripts.zip"
 $zipFolder = "scripts"
 $outpath = "$fileLocation/$zipName"
 
-# Create Hash Table
+# Create Hash Table - Edit the extensions to include any extensions you want to run
 $scriptExtensions=
 @(
     'cmd'
@@ -34,17 +34,7 @@ foreach($scriptExtension in $scriptExtensions)
     {
         $script.FullName
         Write-Host "Installing script #$n"
+        Invoke-Item $script.FullName
         $n++
     }
 }
-
-
-
-
-
-
-
-
-# Run Scripts
-
-
