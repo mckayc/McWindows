@@ -1,9 +1,7 @@
 # This script will download the URL you specify, extract the file, then run the files you request
 
 # Variables that require input
-#$packageURL = "Add URL Here"
-$packageURL = "https://github.com/lixuy/LTSC-Add-MicrosoftStore/archive/2019.zip"
-
+$packageURL = "Add URL Here"
 
 # Pre-set variables (optional to change)
 $fileLocation = "C:\Windows\Temp"
