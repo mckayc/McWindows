@@ -66,7 +66,7 @@ $computerSpecs.Add("Port Info: ", $portInfo)
 # Add the Slack URI below for this to work
 foreach($key in $computerSpecs.keys)
 {
-    $uriSlack = "https://hooks.slack.com/services/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"
+    $uriSlack = "https://hooks.slack.com/services/ADD URI HERE"
     $body = ConvertTo-Json @{
         pretext = "Computer Ready for Surplus"
         text = "$($key) `n$($computerSpecs[$key])`n"
