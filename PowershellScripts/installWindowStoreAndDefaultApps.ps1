@@ -2,14 +2,12 @@
 # Put this code at the beginning of your Powershell script
 
 # Variables that require input
-$logName = "Enter a name here"
-$logPath = "$Env:Programfiles\ENTERFOLDERNAMEHERE"
+$logName = "PowershellScriptLog" # Change this to something of your choosing
+$logFolder = "Log" # Change this folder name to something of your choosing
+$logPath = "$Env:Programfiles\$logFolder" 
 
-Start-Transcript -Path "$logPath\Log\$logName.log" -Force
+Start-Transcript -Path "$logPath\$logFolder\$logName.log" -Force
 # ----------------------------------------Place Script Below This Line------------------------------------------------------------ 
-
-
-
 
 # This script will download the URL you specify, extract the file, then run the files you request
 
@@ -62,7 +60,8 @@ winget install -e --silent --accept-source-agreements --accept-package-agreement
 winget install -e --silent --accept-source-agreements --accept-package-agreements --id 9WZDNCRFHVN5
 # Install Windows Camera
 winget install -e --silent --accept-source-agreements --accept-package-agreements --id 9WZDNCRFJBBG
-
+# Install Windows Notepad
+winget install -e --silent --accept-source-agreements --accept-package-agreements --id 9MSMLRH6LZF3
 
 # ----------------------------------------Place Script Above This Line------------------------------------------------------------ 
 Stop-Transcript
