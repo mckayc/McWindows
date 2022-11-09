@@ -6,7 +6,7 @@ $logName = "PowershellScriptLog" # Change this to something of your choosing
 $logFolder = "Log" # Change this folder name to something of your choosing
 $logPath = "$Env:Programfiles\$logFolder" 
 
-Start-Transcript -Path "$logPath\$logFolder\$logName.log" -Force
+Start-Transcript -Path "$logPath\$logName.log" -Force
 # ----------------------------------------Place Script Below This Line------------------------------------------------------------ 
 
 # Install the Microsoft Store
