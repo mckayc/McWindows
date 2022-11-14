@@ -1,5 +1,5 @@
 #Instructions - Paste the following into IE: 
-#http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/mckayc/McWindows/master/McWindowsProvisioningScript.ps1
+#http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/mckayc/McWindows/master/Provisioning/McBoxstarter.ps1
 
 # Boxstarter commands
 Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
