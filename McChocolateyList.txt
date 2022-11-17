@@ -7,30 +7,55 @@
 # chocolateyPackageName = Category
 
 googlechrome = Internet
-sharex  = Tools
-neverball = Games
-wireguard = Internet
-supertuxkart = Games
 qbittorrent = Internet
 openvpn = Internet
-freecad = 3D Printing
-handbrake = Tools
-plexmediaserver = Media Server
-sonarr = Media Server
-kodi = Multimedia
-plexamp = Multimedia
-darktable = Graphics
+wireguard = Internet
+
+virtualbox = Development
+vscode = Development 
+notepadplusplus = Development 
+git = Development 
+winscp = Development
+
+vlc = Audio
+audacity = Audio 
+lmms = Audio
+
+obs-studio = Video
+kdenlive = Video
+file-converter = Video
+winff = Video
+youtube-dl-gui = Video
+handbrake = Video
+plexmediaserver = Video
+sonarr = Video
+kodi = Video
+mpc-hc = Video
+
+darktable = Photos
+
 gimp = Graphics
-# banana = banana
+inkscape = Graphics
+blender = Graphics
+xnviewmp = Graphics
+fontbase = Graphics
+carnac = Graphics
+
+sharex = Tools
+etcher = Tools
+rufus = Tools
 speedcrunch = Tools
 7zip = Tools
 qdir = Tools
 autohotkey = Tools
 as-ssd = Tools
 windirstat = Tools
-blukrenameutility = Tools
-cura = 3D Printing
-openrct2 = Games
+bulkrenameutility = Tools
+
+cura = 3d Printing
+freecad = 3d Printing
+
+steam = Games
+supertuxkart = Games
+neverball = Games
 0ad = Games
-jackett = Media Server
-radarr = Media Server
