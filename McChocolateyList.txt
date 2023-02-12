@@ -54,6 +54,7 @@ bulkrenameutility = Tools
 bulk-crap-uninstaller = Tools
 
 heaven-benchmark = Benchmark Tools
+superposition-benchmark = Benchmark Tools
 
 cura = 3d Printing
 freecad = 3d Printing
