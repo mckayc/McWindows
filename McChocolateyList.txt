@@ -44,6 +44,7 @@ carnac = Graphics
 sharex = Tools
 etcher = Tools
 rufus = Tools
+ventoy = Tools
 speedcrunch = Tools
 7zip = Tools
 qdir = Tools
