@@ -4,7 +4,6 @@
 # Install Boxstarter
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://boxstarter.org/bootstrapper.ps1')); Get-Boxstarter -Force
 
-cinst chocolatey -y
 Write-Host "This is just a banana test to see what works"
 
 # User Specified Variables
