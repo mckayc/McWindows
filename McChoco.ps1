@@ -4,8 +4,8 @@
 #Install Boxstarter
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://boxstarter.org/bootstrapper.ps1')); Get-Boxstarter -Force
 
-# Install Core - I don't think this is necessary? Will test
-# cinst chocolatey -y
+# Install Core - Needed for the rest of stuff
+cinst chocolatey -y
 
 #Install Other
 cinst geekbench -y
