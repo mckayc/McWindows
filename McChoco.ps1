@@ -6,6 +6,3 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 cinst chocolatey -y
 cinst geekbench -y
-
-$onlineScript = "https://raw.githubusercontent.com/mckayc/McWindows/master/McWindowsProvisioningScript.ps1"
-Invoke-WebRequest $onlineScript | Invoke-Expression; install
