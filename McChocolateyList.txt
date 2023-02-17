@@ -62,6 +62,7 @@ cura = 3d Printing
 freecad = 3d Printing
 
 steam = Games
+epicgameslauncher = Games
 supertuxkart = Games
 neverball = Games
 0ad = Games
