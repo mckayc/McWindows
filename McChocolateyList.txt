@@ -63,6 +63,7 @@ freecad = 3d Printing
 
 steam = Games
 epicgameslauncher = Games
+amazongames = Games
 supertuxkart = Games
 neverball = Games
 0ad = Games
