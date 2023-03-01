@@ -1,19 +1,14 @@
-#Instructions - Paste the following into IE: 
-#http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/mckayc/McWindows/master/McWindowsProvisioningScript.ps1
+#Instructions - Paste the following into a browser: bit.ly/mcwin11 - Copy the script and paste it into Powershell with Admin access the run
 
+# Install Chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions
+# Install Box Starter
+choco install Boxstarter
+Set-ExecutionPolicy Unrestricted -Force
+Import-Module Boxstarter.Chocolatey
 Enable-RemoteDesktop
-Set-StartScreenOptions -EnableBootToDesktop
-
-# Install Core
-cinst chocolatey -y
-cinst chocolateygui -y
-
-
-
-
-
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder -EnableShowRibbon -EnableItemCheckBox
 
 
 # User Specified Variables
