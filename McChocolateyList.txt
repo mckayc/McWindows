@@ -3,7 +3,6 @@
 # The Category simply sorts the packages by category to simplify things when approving software.
 # Feel free to comment out any packages you don't want to show up as an option to install
 
-
 # chocolateyPackageName = Category
 
 googlechrome = Internet
