@@ -5,5 +5,5 @@
 Set-ExplorerOptions -showHiddenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
 Enable-RemoteDesktop
 
-cinst chocolatey -y
-cinst geekbench -y
+choco install googlechrome
+choco install geekbench
