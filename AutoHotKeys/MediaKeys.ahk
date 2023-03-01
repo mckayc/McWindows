@@ -1,4 +1,4 @@
-﻿; AutoHotkey Media Keys
+; AutoHotkey Media Keys
 !Space::Send        {Media_Play_Pause}
 !,::Send            {Media_Prev}
 !.::Send            {Media_Next}
