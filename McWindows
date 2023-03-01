@@ -10,79 +10,84 @@ Set-StartScreenOptions -EnableBootToDesktop
 cinst chocolatey -y
 cinst chocolateygui -y
 
-#Internet
-cinst googlechrome -y
-cinst qbittorrent -y
-cinst openvpn -y
-
-#Development
-#cinst virtualbox -y
-cinst vscode -y
-#cinst notepadplusplus -y
-cinst git -y
-cinst winscp -y
-
-#Multimedia - Audio
-cinst vlc -y
-cinst audacity -y
-cinst lmms -y
-
-#Office
-choco install okular -y
-
-#Multimedia - Video
-cinst obs-studio -y
-#cinst kdenlive -y
-cinst file-converter -y
-#cinst winff -y
-cinst youtube-dl -y
-cinst youtube-dl-gui -y
-#cinst handbrake -y
-#cinst plexmediaserver -y
-#cinst sonarr -y
-#cinst kodi -y
-
-#Multimedia - Photo
-cinst darktable -y
-
-#Multimedia - Graphics
-cinst gimp -y
-cinst inkscape -y
-cinst blender -y
-cinst xnviewmp -y
-cinst fontbase -y
-#cinst carnac -y
-
-#Tools
-cinst sharex -y
-cinst etcher -y
-cinst rufus -y
-cinst speedcrunch -y
-cinst 7zip -y
-cinst qdir -y
-cinst autohotkey -y
-cinst as-ssd -y
-cinst windirstat -y
-cinst bulkrenameutility -y
-
-#3D Printing
-cinst cura -y
-#cinst freecad -y
-
-#Gaming/Games
-#cinst steam -y
-cinst supertuxkart -y
-choco install neverball -y
-choco install openrct2 -y
-choco install 0ad -y
 
 
-#System
 
-#Downloading
-#cinst sonarr -y
-#cinst jackett -y
-#cinst radarr -y
+
+# Add all packages below in single quotes. 
+Write-Host "Multimedia Stuff"
+Write-Host "-----------------------------------------------"
+$acceptedPackages = @()
+$packages =
+@(
+    'googlechrome'
+    'googlechrome'
+    'qbittorrent'
+    'openvpn'
+    'wireguard'
+    'virtualbox'
+    'vscode'
+    'git'
+    'winscp'
+    'vlc'
+    'audacity'
+    'lmms'
+    'mpc-hc'
+    'okular'
+    'obs-studio'
+    'kdenlive'
+    'file-converter'
+    'winff'
+    'youtube-dl-gui'
+    'handbrake'
+    'plexmediaserver'
+    'sonarr'
+    'kodi'
+    'plexamp'
+    'darktable'
+    'gimp'
+    'inkscape'
+    'blender'
+    'xnviewmp'
+    'fontbase'
+    'carnac'
+    'sharex'
+    'etcher'
+    'rufus'
+    'speedcrunch'
+    '7zip'
+    'qdir'
+    'autohotkey'
+    'as-ssd'
+    'windirstat'
+    'bulkrenameutility'
+    'cura'
+    'freecad'
+    'supertuxkart'
+    'neverball'
+    'openrct2'
+    '0ad'
+    'sonarr'
+    'jackett'
+    'radarr'
+)
+
+$packages = $packages | Sort-Object
+
+Write-Host "If you would like to install the listed package, please enter 'y'; otherwise leave blank."
+foreach ($package in $packages) {
+
+    $confimation = Read-Host "$package"
+    if ($confimation -eq "y")
+    {
+        $acceptedPackages += $package
+    }
+}
+
+foreach ($acceptedPackage in $acceptedPackages) {
+    Write-Output "Installing the package $acceptedPackage"
+    #choco install $acceptedPackage -y
+}
 
 # Set Chocolatey to auto-update every day
 choco install choco-upgrade-all-at --params "'/DAILY:yes /TIME:05:00 /ABORTTIME:06:00'" -y
