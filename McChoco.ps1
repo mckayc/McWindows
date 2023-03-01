@@ -2,11 +2,10 @@
 # http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/mckayc/McWindows/master/McChoco.ps1
 
 # Install Boxstarter
-Set-WindowsExplorerOptions -EnableShowProtectedOSFiles -EnableShowFileExtensions
+Set-ExplorerOptions -showHiddenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
 Enable-RemoteDesktop
-Set-StartScreenOptions -EnableBootToDesktop
 
 # Install Core
-cinst chocolatey -y
-cinst googlechrome -y
-cinst geekbench -y
+choco install chocolatey
+choco install googlechrome
+choco install geekbench
