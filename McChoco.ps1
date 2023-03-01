@@ -2,5 +2,8 @@
 # http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/mckayc/McWindows/master/McChoco.ps1
 
 # Install Boxstarter
-https://boxstarter.org/package/geekbench,googlechrome
+Set-ExplorerOptions -showHiddenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Enable-RemoteDesktop
 
+cinst chocolatey -y
+cinst geekbench -y
