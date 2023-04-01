@@ -45,13 +45,16 @@ etcher = Tools
 rufus = Tools
 ventoy = Tools
 speedcrunch = Tools
-7zip = Tools
-qdir = Tools
 autohotkey = Tools
-as-ssd = Tools
-windirstat = Tools
 bulkrenameutility = Tools
 bulk-crap-uninstaller = Tools
+
+7zip = Files
+qdir = Files
+syncthingtray = Files
+as-ssd = Files
+windirstat = Files
+
 
 heaven-benchmark = Benchmark Tools
 superposition-benchmark = Benchmark Tools
