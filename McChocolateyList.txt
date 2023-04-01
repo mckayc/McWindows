@@ -55,7 +55,6 @@ syncthingtray = Files
 as-ssd = Files
 windirstat = Files
 
-
 heaven-benchmark = Benchmark Tools
 superposition-benchmark = Benchmark Tools
 geekbench = Benchmark Tools
