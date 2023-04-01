@@ -59,3 +59,18 @@ foreach ($acceptedPackage in $acceptedPackages) {
     Write-Output "Installing the package " $acceptedPackage.name
     choco install $acceptedPackage.name -y
 }
+
+# git stuff
+
+# Create folder
+mkdir ~\Documents\Git
+cd ~\Documents\Git
+
+# Checkout the McKayC Repository
+git clone https://github.com/mckayc/McWindows
+git clone https://github.com/mckayc/docker
+
+# Create Links for Scripts to start on startup
+New-Item -ItemType SymbolicLink -Path "~\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" -Name "MediaKeys.ahk" -Value "~\Documents\Git\McWindows\AutoHotKeys\MediaKeys.ahk"
+
+# End
