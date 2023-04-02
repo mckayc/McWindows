@@ -19,6 +19,7 @@ winscp = Development
 vlc = Audio
 audacity = Audio 
 lmms = Audio
+plexamp = Audio
 
 obs-studio = Video
 kdenlive = Video
