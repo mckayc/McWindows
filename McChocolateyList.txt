@@ -63,9 +63,14 @@ geekbench = Benchmark Tools
 cura = 3d Printing
 freecad = 3d Printing
 
+nmap = Network Tools
+
 steam = Games
 epicgameslauncher = Games
 amazongames = Games
 supertuxkart = Games
 neverball = Games
 0ad = Games
+
+# Software to Manually install (software that is no yet on Chocolatey)
+# gInk - Draw annotations over the screen - https://github.com/geovens/gInk/releases/
