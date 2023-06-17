@@ -24,6 +24,7 @@ plexamp = Audio
 obs-studio = Video
 kdenlive = Video
 file-converter = Video
+lossless-cut = Video
 winff = Video
 youtube-dl-gui = Video
 handbrake = Video
