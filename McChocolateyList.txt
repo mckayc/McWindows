@@ -33,6 +33,8 @@ sonarr = Video
 kodi = Video
 mpc-hc = Video
 
+zoom = Office
+
 darktable = Photos
 
 gimp = Graphics
