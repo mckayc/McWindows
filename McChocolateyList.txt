@@ -9,6 +9,7 @@ googlechrome = Internet
 qbittorrent = Internet
 openvpn = Internet
 wireguard = Internet
+tailscale = Internet
 
 virtualbox = Development
 vscode = Development 
