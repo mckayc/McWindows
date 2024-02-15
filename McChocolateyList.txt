@@ -53,6 +53,7 @@ speedcrunch = Tools
 autohotkey = Tools
 bulkrenameutility = Tools
 bulk-crap-uninstaller = Tools
+mouse-jiggler = Tools
 
 7zip = Files
 qdir = Files
