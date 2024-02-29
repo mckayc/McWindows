@@ -76,6 +76,7 @@ amazongames = Games
 supertuxkart = Games
 neverball = Games
 0ad = Games
+playnite = Games
 
 # Software to Manually install (software that is no yet on Chocolatey)
 # gInk - Draw annotations over the screen - https://github.com/geovens/gInk/releases/
