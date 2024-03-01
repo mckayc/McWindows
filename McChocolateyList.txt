@@ -78,5 +78,12 @@ neverball = Games
 0ad = Games
 playnite = Games
 
+higan = Emulator
+dolphin = Emulator
+snes9x = Emulator
+retroarch = Emulator
+nestopia = Emulator
+
+
 # Software to Manually install (software that is no yet on Chocolatey)
 # gInk - Draw annotations over the screen - https://github.com/geovens/gInk/releases/
