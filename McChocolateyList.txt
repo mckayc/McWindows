@@ -55,6 +55,7 @@ autohotkey = Tools
 bulkrenameutility = Tools
 bulk-crap-uninstaller = Tools
 mouse-jiggler = Tools
+hwinfo = Tools
 
 7zip = Files
 qdir = Files
