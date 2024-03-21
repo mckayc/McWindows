@@ -56,6 +56,7 @@ bulkrenameutility = Tools
 bulk-crap-uninstaller = Tools
 mouse-jiggler = Tools
 hwinfo = Tools
+openhardwaremonitor = Tools
 
 7zip = Files
 qdir = Files
