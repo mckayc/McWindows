@@ -45,6 +45,7 @@ blender = Graphics
 xnviewmp = Graphics
 fontbase = Graphics
 carnac = Graphics
+sweet-home-3d = Graphics
 
 sharex = Tools
 etcher = Tools
