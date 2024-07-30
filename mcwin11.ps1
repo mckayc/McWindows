@@ -22,7 +22,7 @@ function Install-Chocolatey {
     $chocoInstallScriptUrl = "https://community.chocolatey.org/install.ps1"
     try {
         # Download and install Chocolatey
-        Invoke-WebRequest -Uri $chocoInstallScriptUrl -UseBasicP -OutFile "$env:TEMP\choco-install.ps1"
+        Invoke-WebRequest -Uri $chocoInstallScriptUrl -UseBasicParsing -OutFile "$env:TEMP\choco-install.ps1"
         & "$env:TEMP\choco-install.ps1"
         Write-Output "Chocolatey installed successfully."
     } catch {
@@ -32,10 +32,22 @@ function Install-Chocolatey {
     }
 }
 
+# Function to get installed Chocolatey packages
+function Get-InstalledPackages {
+    $installedPackages = choco list --no-color | ForEach-Object {
+        $packageName = $_.Split("|")[0].Trim().ToLower()
+        $packageName -replace '[\.\s\d].*$', '' # Remove all text after a period, space, or number
+    }
+    return $installedPackages
+}
+
 # Check if Chocolatey is installed, and install if not
 if (-Not (Check-Chocolatey)) {
     Install-Chocolatey
 }
+
+# Get the list of installed packages
+$installedPackages = Get-InstalledPackages
 
 # Define the URL for the software list
 $url = "https://raw.githubusercontent.com/mckayc/McWindows/master/McChocolateyList.txt"
@@ -71,6 +83,10 @@ $form.Text = "Software Provisioning"
 $form.Size = New-Object System.Drawing.Size(600, 800)
 $form.StartPosition = "CenterScreen"
 $form.MinimumSize = New-Object System.Drawing.Size(600, 800)
+$form.FormBorderStyle = [System.Windows.Forms.FormBorderStyle]::Sizable
+$form.MaximizeBox = $true
+$form.MinimizeBox = $true
+$form.ControlBox = $true
 
 # Create a container for categories
 $categoryPanel = New-Object System.Windows.Forms.FlowLayoutPanel
@@ -135,6 +151,10 @@ if ($installFirstGroup) {
     foreach ($item in $installFirstGroup.Group) {
         $checkbox = New-Object System.Windows.Forms.CheckBox
         $checkbox.Text = $item.Software
+        if ($installedPackages -contains ($item.Software.ToLower() -replace '[\.\s\d]+.*$', '')) {
+            $checkbox.Checked = $true
+            $checkbox.BackColor = [System.Drawing.Color]::LightGreen
+        }
         $checkbox.Top = $topPosition
         $checkbox.Left = 10
         $checkbox.Width = 550
@@ -159,6 +179,10 @@ foreach ($group in $otherGroups) {
     foreach ($item in $group.Group | Sort-Object Software) {
         $checkbox = New-Object System.Windows.Forms.CheckBox
         $checkbox.Text = $item.Software
+        if ($installedPackages -contains ($item.Software.ToLower() -replace '[\.\s\d]+.*$', '')) {
+            $checkbox.Checked = $true
+            $checkbox.BackColor = [System.Drawing.Color]::LightGreen
+        }
         $checkbox.Top = $topPosition
         $checkbox.Left = 10
         $checkbox.Width = 550
@@ -175,36 +199,43 @@ $submitButton.Add_Click({
     $selectedSoftware = @()
     foreach ($groupBox in $categoryPanel.Controls) {
         foreach ($checkbox in $groupBox.Controls) {
-            if ($checkbox.Checked) {
+            if ($checkbox.Checked -and $checkbox.BackColor -ne [System.Drawing.Color]::LightGreen) {
                 $selectedSoftware += $checkbox.Text
             }
         }
     }
-    
-    if ($selectedSoftware.Count -eq 0) {
-        [System.Windows.Forms.MessageBox]::Show("No software selected!")
-        return
+
+    # Function to install selected software asynchronously
+    function Install-SelectedSoftware {
+        param ([string[]]$softwareList)
+        $progressBar.Maximum = $softwareList.Count
+        $progressBar.Value = 0
+
+        foreach ($software in $softwareList) {
+            $outputBox.AppendText("Installing $software..." + "`r`n")
+            $outputBox.AppendText("Starting installation..." + "`r`n")
+            $form.Refresh()
+
+            # Execute the install command asynchronously
+            Start-Job -ScriptBlock {
+                param ($software)
+                $process = Start-Process -FilePath "choco" -ArgumentList "install $software -y" -NoNewWindow -PassThru -RedirectStandardOutput "$env:TEMP\choco-install-output.log"
+                $process.WaitForExit()
+
+                # Read output and update progress
+                $output = Get-Content "$env:TEMP\choco-install-output.log"
+                [System.Windows.Forms.MessageBox]::Show($output -join "`r`n", "Installation Output")
+            } -ArgumentList $software | Out-Null
+
+            # Update progress bar
+            $progressBar.Value++
+            $form.Refresh()
+        }
     }
 
-    # Update progress bar and output box
-    $progressBar.Maximum = $selectedSoftware.Count
-    $progressBar.Value = 0
-    $outputBox.Clear()
-
-    # Install software
-    foreach ($software in $selectedSoftware) {
-        $outputBox.AppendText("Installing $software...\`r`n")
-        $form.Refresh()
-        $chocoProcess = Start-Process powershell -ArgumentList "choco install $software -y" -NoNewWindow -Wait -PassThru
-        $chocoProcess.WaitForExit()
-        $outputBox.AppendText("$software installation completed.`r`n")
-        $progressBar.Value++
-        [System.Windows.Forms.Application]::DoEvents() # Process GUI events
-    }
-    
-    [System.Windows.Forms.MessageBox]::Show("Installation complete!")
+    # Start installation
+    Install-SelectedSoftware -softwareList $selectedSoftware
 })
 
-# Hide the PowerShell window and show the form
-$form.Add_Shown({ $form.Activate() })
-$form.ShowDialog() | Out-Null
+# Show the form
+[System.Windows.Forms.Application]::Run($form)
