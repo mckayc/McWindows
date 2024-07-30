@@ -1,5 +1,4 @@
 googlechrome = Install First
-
 qbittorrent = Internet
 openvpn = Internet
 wireguard = Internet
@@ -14,7 +13,7 @@ winscp = Development
 vlc = Audio
 audacity = Audio 
 lmms = Audio
-plexamp = Audio
+plexamp = Install First
 
 obs-studio = Video
 kdenlive = Video
@@ -54,7 +53,7 @@ hwinfo = Tools
 openhardwaremonitor = Tools
 
 7zip = Files
-qdir = Files
+qdir = Install First
 syncthingtray = Files
 as-ssd = Files
 windirstat = Files
