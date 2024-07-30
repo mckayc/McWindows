@@ -1,11 +1,5 @@
-# Add packages in the formate of (packageName) = (Category)
-# The package name is what actually allows you to install things. 
-# The Category simply sorts the packages by category to simplify things when approving software.
-# Feel free to comment out any packages you don't want to show up as an option to install
+googlechrome = Install First
 
-# chocolateyPackageName = Category
-
-googlechrome = Internet
 qbittorrent = Internet
 openvpn = Internet
 wireguard = Internet
