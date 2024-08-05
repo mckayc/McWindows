@@ -1,0 +1,70 @@
+Package,Category
+googlechrome,Install First
+qbittorrent,Internet
+openvpn,Internet
+wireguard,Internet
+tailscale,Internet
+virtualbox,Development
+vscode,Development
+notepadplusplus,Development
+git,Development
+winscp,Development
+vlc,Audio
+audacity,Audio
+lmms,Audio
+plexamp,Install First
+obs-studio,Video
+kdenlive,Video
+file-converter,Video
+lossless-cut,Video
+avidemux,Video
+winff,Video
+youtube-dl-gui,Video
+handbrake,Video
+plexmediaserver,Video
+sonarr,Video
+kodi,Video
+mpc-hc,Video
+zoom,Office
+darktable,Photos
+gimp,Graphics
+inkscape,Graphics
+blender,Graphics
+xnviewmp,Graphics
+fontbase,Graphics
+carnac,Graphics
+sweet-home-3d,Graphics
+sharex,Tools
+etcher,Tools
+rufus,Tools
+ventoy,Tools
+speedcrunch,Tools
+autohotkey,Tools
+bulkrenameutility,Tools
+bulk-crap-uninstaller,Tools
+mouse-jiggler,Tools
+hwinfo,Tools
+openhardwaremonitor,Tools
+7zip,Files
+qdir,Install First
+syncthingtray,Files
+as-ssd,Files
+windirstat,Files
+heaven-benchmark,Benchmark Tools
+superposition-benchmark,Benchmark Tools
+geekbench,Benchmark Tools
+cura,3d Printing
+freecad,3d Printing
+nmap,Network Tools
+steam,Games
+epicgameslauncher,Games
+amazongames,Games
+supertuxkart,Games
+neverball,Games
+0ad,Games
+playnite,Games
+higan,Emulator
+dolphin,Emulator
+snes9x,Emulator
+retroarch,Emulator
+nestopia,Emulator
