@@ -29,6 +29,7 @@ kodi = Video
 mpc-hc = Video
 
 zoom = Office
+libreoffice-fresh = Office
 
 darktable = Photos
 
