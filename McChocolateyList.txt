@@ -4,6 +4,11 @@ openvpn = Internet
 wireguard = Internet
 tailscale = Internet
 
+ollama = AI
+# Stability Matrix = AI
+# jan.ai = AI
+lm-studio = AI
+
 virtualbox = Development
 vscode = Development 
 notepadplusplus = Development 
